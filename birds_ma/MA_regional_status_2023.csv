@@ -1,0 +1,243 @@
+"state_name","species_code","common_name","scientific_name","percent_pop_breeding","percent_pop_postbreeding_migration","percent_pop_nonbreeding","percent_pop_prebreeding_migration","max_week_season","max_week","max_week_percent_pop","state_rank_breeding","breeding_habitat_primary","breeding_habitat_secondary"
+"Massachusetts","acafly","Acadian Flycatcher","Empidonax virescens",0.02,0,0,0,"breeding","06-07",0.02314,"30 of 32","Forests:  Temperate Eastern",NA
+"Massachusetts","aldfly","Alder Flycatcher","Empidonax alnorum",0.05,0.04,0,0.11,"prebreeding_migration","05-17",2.063,"10 of 12","Wetlands:  Boreal","Wetlands:  Forested"
+"Massachusetts","ambduc","American Black Duck","Anas rubripes",0.31,1.17,10.7,3.32,"nonbreeding","02-08",14.56,"5 of 16","Wetlands:  Boreal","Coasts:  Saltmarsh"
+"Massachusetts","amebit","American Bittern","Botaurus lentiginosus",0.03,0.15,0.05,0.11,"prebreeding_migration","04-19",0.6571,"19 of 26","Wetlands:  Freshwater Marsh",NA
+"Massachusetts","amecro","American Crow","Corvus brachyrhynchos",0.29,0.47,1.6,0.78,"prebreeding_migration","02-01",1.995,"40 of 49","Open Country:  Habitat Mosaic","Open Country:  Developed/Disturbed"
+"Massachusetts","amegfi","American Goldfinch","Spinus tristis",0.78,0.62,0.48,0.89,"prebreeding_migration","04-26",1.106,"27 of 45","Open Country:  Habitat Mosaic",NA
+"Massachusetts","amekes","American Kestrel","Falco sparverius",0.01,0.02,0,0.05,"prebreeding_migration","04-19",0.1278,"44 of 44","Open Country:  Habitat Mosaic",NA
+"Massachusetts","ameoys","American Oystercatcher","Haematopus palliatus",0.69,0.51,0,0.28,"postbreeding_migration","08-16",0.8766,"8 of 17","Coasts:  Beach and Estuary",NA
+"Massachusetts","amepip","American Pipit","Anthus rubescens",0,0.03,0.01,0,"postbreeding_migration","11-01",0.3401,NA,"Tundra:  Alpine","Tundra:  Arctic"
+"Massachusetts","amered","American Redstart","Setophaga ruticilla",0.38,0.38,0,0.52,"prebreeding_migration","05-17",0.9315,"14 of 36","Forests:  Temperate Generalist",NA
+"Massachusetts","amerob","American Robin","Turdus migratorius",0.38,0.65,0.52,0.34,"postbreeding_migration","10-25",0.9959,"32 of 48","Forests:  Temperate Generalist",NA
+"Massachusetts","amewig","American Wigeon","Mareca americana",0,0.01,0.03,0.01,"postbreeding_migration","12-06",0.03845,NA,"Wetlands:  Seasonally Wet Grasslands","Wetlands:  Freshwater Marsh"
+"Massachusetts","amewoo","American Woodcock","Scolopax minor",1.03,1.33,0.05,2.19,"postbreeding_migration","11-08",8.515,"6 of 21","Forests:  Temperate Eastern","Forests:  Boreal"
+"Massachusetts","amgplo","American Golden-Plover","Pluvialis dominica",0,0.01,0,0,"postbreeding_migration","09-06",0.1099,NA,"Tundra:  Arctic",NA
+"Massachusetts","amtspa","American Tree Sparrow","Spizelloides arborea",0,0.12,0.3,0.08,"postbreeding_migration","12-06",0.3793,NA,"Tundra:  Arctic","Forests:  Boreal"
+"Massachusetts","babwar","Bay-breasted Warbler","Setophaga castanea",0,0.11,0,0.42,"prebreeding_migration","05-17",2.008,NA,"Forests:  Boreal",NA
+"Massachusetts","baleag","Bald Eagle","Haliaeetus leucocephalus",0.03,0.03,0.05,0.06,"prebreeding_migration","05-03",0.09098,"42 of 47","Wetlands:  Generalist","Coasts:  Beach and Estuary"
+"Massachusetts","balori","Baltimore Oriole","Icterus galbula",1.11,0.64,0,1.01,"postbreeding_migration","08-09",1.405,"16 of 35","Forests:  Temperate Eastern",NA
+"Massachusetts","banswa","Bank Swallow","Riparia riparia",0.02,0,0,0.01,"postbreeding_migration","06-28",0.02383,"22 of 28","Wetlands Aerial:  Lakes and Rivers","Open Country Aerial:  Habitat Mosaic"
+"Massachusetts","barswa","Barn Swallow","Hirundo rustica",0.03,0.01,0,0.01,"breeding","07-12",0.04323,"42 of 49","Open Country Aerial:  Habitat Mosaic",NA
+"Massachusetts","bawwar","Black-and-white Warbler","Mniotilta varia",0.6,0.39,0,0.55,"prebreeding_migration","05-03",1.728,"18 of 35","Forests:  Temperate Eastern","Forests:  Boreal"
+"Massachusetts","bcnher","Black-crowned Night Heron","Nycticorax nycticorax",0.01,0,0,0.01,"prebreeding_migration","05-24",0.02385,"33 of 33","Wetlands:  Generalist","Coasts:  Saltmarsh"
+"Massachusetts","belkin1","Belted Kingfisher","Megaceryle alcyon",0.47,0.38,0.25,0.61,"prebreeding_migration","04-12",0.9634,"29 of 48","Wetlands:  Generalist",NA
+"Massachusetts","bkbcuc","Black-billed Cuckoo","Coccyzus erythropthalmus",0.7,0.73,0,3.2,"prebreeding_migration","05-17",4.774,"10 of 26","Forests:  Temperate Eastern",NA
+"Massachusetts","bkbplo","Black-bellied Plover","Pluvialis squatarola",0.21,1.16,0.03,0.24,"postbreeding_migration","09-13",2.705,"7 of 17","Wetlands:  Tundra","Tundra:  Arctic"
+"Massachusetts","bkbwar","Blackburnian Warbler","Setophaga fusca",0.7,0.18,0,0.68,"prebreeding_migration","05-10",1.502,"9 of 17","Forests:  Boreal","Forests:  Temperate Eastern"
+"Massachusetts","bkcchi","Black-capped Chickadee","Poecile atricapillus",0.74,0.74,0.74,0.74,"resident","year round resident",NA,"18 of 35","Forests:  Temperate Generalist",NA
+"Massachusetts","bkpwar","Blackpoll Warbler","Setophaga striata",0,0.76,0,0.17,"postbreeding_migration","10-11",8.363,NA,"Forests:  Boreal",NA
+"Massachusetts","blksco2","Black Scoter","Melanitta americana",0.01,10.31,3.04,1.93,"postbreeding_migration","11-08",20.5,"4 of 4","Wetlands:  Tundra",NA
+"Massachusetts","blkski","Black Skimmer","Rynchops niger",0.01,0,0,0,"breeding","07-05",0.01146,"15 of 15","Coasts:  Beach and Estuary","Coasts:  Saltmarsh"
+"Massachusetts","blkter","Black Tern","Chlidonias niger",0,0.05,0,0,"postbreeding_migration","08-30",0.2612,NA,"Wetlands:  Freshwater Marsh",NA
+"Massachusetts","blujay","Blue Jay","Cyanocitta cristata",0.74,0.77,0.72,0.76,"postbreeding_migration","11-08",0.8786,"28 of 40","Forests:  Temperate Eastern",NA
+"Massachusetts","bnhcow","Brown-headed Cowbird","Molothrus ater",0.15,0.1,0.02,0.17,"prebreeding_migration","04-05",0.2495,"42 of 48","Open Country:  Habitat Mosaic",NA
+"Massachusetts","boboli","Bobolink","Dolichonyx oryzivorus",0.4,1.21,0,0.51,"postbreeding_migration","10-04",2.064,"16 of 32","Grasslands:  Temperate",NA
+"Massachusetts","bongul","Bonaparte's Gull","Chroicocephalus philadelphia",0.05,0.71,0.63,0.09,"postbreeding_migration","11-22",3.008,"4 of 11","Wetlands:  Boreal",NA
+"Massachusetts","brant","Brant","Branta bernicla",0,0.16,1.01,0.8,"prebreeding_migration","03-15",3.392,NA,"Coasts:  Saltmarsh","Coasts:  Tundra"
+"Massachusetts","brdowl","Barred Owl","Strix varia",0.89,0.89,0.89,0.89,"resident","year round resident",NA,"25 of 42","Forests:  Temperate Eastern","Forests:  Temperate Western"
+"Massachusetts","brncre","Brown Creeper","Certhia americana",0.63,0.66,0.74,1.14,"prebreeding_migration","04-12",1.307,"18 of 30","Forests:  Temperate Generalist",NA
+"Massachusetts","brnthr","Brown Thrasher","Toxostoma rufum",0.03,0.03,0.01,0.1,"prebreeding_migration","05-03",0.2013,"37 of 39","Forests:  Temperate Eastern",NA
+"Massachusetts","brwhaw","Broad-winged Hawk","Buteo platypterus",0.72,0.09,0,0.17,"postbreeding_migration","09-13",1.147,"21 of 33","Forests:  Boreal","Forests:  Temperate Eastern"
+"Massachusetts","btbwar","Black-throated Blue Warbler","Setophaga caerulescens",1.03,0.59,0,1.28,"prebreeding_migration","05-10",2.502,"9 of 18","Forests:  Boreal","Forests:  Temperate Eastern"
+"Massachusetts","btnwar","Black-throated Green Warbler","Setophaga virens",0.47,0.53,0,0.64,"prebreeding_migration","05-03",1.577,"14 of 24","Forests:  Boreal","Forests:  Temperate Eastern"
+"Massachusetts","buffle","Bufflehead","Bucephala albeola",0,0.58,2.72,0.92,"nonbreeding","01-18",3.1,NA,"Wetlands:  Forested","Wetlands:  Lakes and Rivers"
+"Massachusetts","buggna","Blue-gray Gnatcatcher","Polioptila caerulea",0.19,0.07,0,0.12,"prebreeding_migration","05-17",0.2562,"36 of 44","Forests:  Generalist",NA
+"Massachusetts","buhvir","Blue-headed Vireo","Vireo solitarius",0.37,0.61,0,0.68,"prebreeding_migration","05-03",2.286,"15 of 22","Forests:  Boreal","Forests:  Temperate Eastern"
+"Massachusetts","buwwar","Blue-winged Warbler","Vermivora cyanoptera",3.47,1.29,0,2.33,"postbreeding_migration","08-02",6.118,"10 of 26","Forests:  Temperate Eastern",NA
+"Massachusetts","camwar","Cape May Warbler","Setophaga tigrina",0,0.25,0,0.16,"postbreeding_migration","09-13",1.478,NA,"Forests:  Boreal",NA
+"Massachusetts","cangoo","Canada Goose","Branta canadensis",0.19,0.15,0.51,0.15,"nonbreeding","01-04",0.5573,"36 of 49","Wetlands:  Generalist",NA
+"Massachusetts","canvas","Canvasback","Aythya valisineria",0,0,0.01,0,"prebreeding_migration","02-01",0.01439,NA,"Wetlands:  Seasonally Wet Grasslands","Wetlands:  Freshwater Marsh"
+"Massachusetts","canwar","Canada Warbler","Cardellina canadensis",0.26,0.34,0,0.78,"prebreeding_migration","05-17",3.697,"12 of 19","Forests:  Boreal","Forests:  Temperate Eastern"
+"Massachusetts","carwre","Carolina Wren","Thryothorus ludovicianus",0.3,0.3,0.3,0.3,"resident","year round resident",NA,"24 of 33","Forests:  Temperate Eastern",NA
+"Massachusetts","cedwax","Cedar Waxwing","Bombycilla cedrorum",0.57,0.59,0.32,0.48,"postbreeding_migration","10-04",1.037,"19 of 41","Forests:  Temperate Generalist",NA
+"Massachusetts","cerwar","Cerulean Warbler","Setophaga cerulea",0.02,0,0,0.01,"breeding","07-05",0.06933,"21 of 22","Forests:  Temperate Eastern",NA
+"Massachusetts","chispa","Chipping Sparrow","Spizella passerina",0.47,0.35,0,0.21,"postbreeding_migration","10-11",0.7261,"36 of 48","Forests:  Temperate Generalist",NA
+"Massachusetts","chiswi","Chimney Swift","Chaetura pelagica",1.22,0.41,0,0.84,"breeding","06-07",1.316,"25 of 41","Open Country Aerial:  Developed/Disturbed","Open Country Aerial:  Habitat Mosaic"
+"Massachusetts","chswar","Chestnut-sided Warbler","Setophaga pensylvanica",0.65,0.39,0,0.82,"prebreeding_migration","05-10",1.537,"10 of 21","Forests:  Boreal","Forests:  Temperate Eastern"
+"Massachusetts","chwwid","Chuck-will's-widow","Antrostomus carolinensis",0,0.02,0,0,"postbreeding_migration","07-12",0.01794,NA,"Forests:  Temperate Eastern",NA
+"Massachusetts","clarai11","Clapper Rail","Rallus crepitans",0,0.01,0,0,"breeding","09-06",0.01159,NA,"Coasts:  Saltmarsh",NA
+"Massachusetts","comeid","Common Eider","Somateria mollissima",0.14,8.97,4.77,1.13,"postbreeding_migration","11-15",46.38,"3 of 6","Coasts:  Cliffs and Islands","Coasts:  Marine Waters"
+"Massachusetts","comgol","Common Goldeneye","Bucephala clangula",0,0.05,0.36,0.1,"nonbreeding","02-08",0.4269,NA,"Wetlands:  Forested","Wetlands:  Lakes and Rivers"
+"Massachusetts","comgra","Common Grackle","Quiscalus quiscula",0.74,0.35,0.03,0.62,"postbreeding_migration","09-20",1.035,"29 of 42","Open Country:  Habitat Mosaic",NA
+"Massachusetts","comloo","Common Loon","Gavia immer",0.07,0.55,3.24,0.67,"nonbreeding","12-27",3.673,"9 of 13","Wetlands:  Lakes and Rivers",NA
+"Massachusetts","commer","Common Merganser","Mergus merganser",0.03,0.14,0.21,0.16,"prebreeding_migration","03-29",0.6791,"20 of 26","Wetlands:  Forested","Wetlands:  Lakes and Rivers"
+"Massachusetts","comnig","Common Nighthawk","Chordeiles minor",0,0.72,0,0.13,"postbreeding_migration","08-30",1.563,NA,"Open Country Aerial:  Habitat Mosaic",NA
+"Massachusetts","comrav","Common Raven","Corvus corax",0.01,0.01,0.01,0.01,"resident","year round resident",NA,"29 of 29","Open Country:  Habitat Mosaic",NA
+"Massachusetts","comred","Common Redpoll","Acanthis flammea",0,0.01,0.01,0,"nonbreeding","01-04",0.02926,NA,"Tundra:  Arctic","Forests:  Boreal"
+"Massachusetts","comter","Common Tern","Sterna hirundo",2.12,1.83,0,1.83,"postbreeding_migration","08-23",4.589,"1 of 22","Coasts:  Beach and Estuary","Wetlands:  Lakes and Rivers"
+"Massachusetts","comyel","Common Yellowthroat","Geothlypis trichas",0.62,0.62,0,0.57,"prebreeding_migration","05-17",1.097,"28 of 49","Open Country:  Habitat Mosaic","Wetlands:  Freshwater Marsh"
+"Massachusetts","conwar","Connecticut Warbler","Oporornis agilis",0,8.1,0,0,"postbreeding_migration","09-20",17.55,NA,"Forests:  Boreal",NA
+"Massachusetts","coohaw","Cooper's Hawk","Accipiter cooperii",0.86,0.65,0.59,0.85,"prebreeding_migration","05-17",1.433,"27 of 49","Forests:  Temperate Generalist",NA
+"Massachusetts","daejun","Dark-eyed Junco","Junco hyemalis",0.02,0.32,0.37,0.2,"postbreeding_migration","11-15",0.5797,"25 of 26","Forests:  Temperate Generalist",NA
+"Massachusetts","dickci","Dickcissel","Spiza americana",0,0.02,0,0,"postbreeding_migration","10-04",0.04138,NA,"Grasslands:  Temperate",NA
+"Massachusetts","doccor","Double-crested Cormorant","Nannopterum auritum",1.92,1.86,0.02,0.72,"postbreeding_migration","10-18",4.143,"10 of 48","Wetlands:  Generalist","Coasts:  Beach and Estuary"
+"Massachusetts","dowwoo","Downy Woodpecker","Dryobates pubescens",0.75,0.75,0.75,0.75,"resident","year round resident",NA,"33 of 50","Forests:  Temperate Generalist",NA
+"Massachusetts","dunlin","Dunlin","Calidris alpina",0,0.09,0.13,0.07,"prebreeding_migration","05-24",0.2357,NA,"Wetlands:  Tundra","Coasts:  Tundra"
+"Massachusetts","easblu","Eastern Bluebird","Sialia sialis",0.38,0.57,0.57,0.54,"postbreeding_migration","11-08",0.6748,"30 of 41","Forests:  Temperate Eastern","Forests:  Mesoamerican Pine-Oak"
+"Massachusetts","easkin","Eastern Kingbird","Tyrannus tyrannus",0.42,0.17,0,0.27,"prebreeding_migration","05-17",0.5364,"34 of 45","Open Country:  Habitat Mosaic","Grasslands:  Temperate"
+"Massachusetts","easmea","Eastern Meadowlark","Sturnella magna",0.01,0.01,0,0.01,"postbreeding_migration","10-18",0.03303,"31 of 31","Grasslands:  Temperate","Grasslands:  Tropical"
+"Massachusetts","easowl1","Eastern Screech-Owl","Megascops asio",0.86,0.86,0.86,0.86,"resident","year round resident",NA,"28 of 39","Forests:  Temperate Eastern",NA
+"Massachusetts","easpho","Eastern Phoebe","Sayornis phoebe",0.89,0.63,0,0.8,"postbreeding_migration","09-20",1.793,"27 of 38","Open Country:  Habitat Mosaic","Forests:  Temperate Eastern"
+"Massachusetts","eastow","Eastern Towhee","Pipilo erythrophthalmus",1.22,0.6,0.03,0.69,"postbreeding_migration","09-20",1.692,"22 of 36","Forests:  Temperate Eastern",NA
+"Massachusetts","easwpw1","Eastern Whip-poor-will","Antrostomus vociferus",0.53,0,0,0.95,"unidentified","09-20",2.062,"20 of 32","Forests:  Temperate Eastern",NA
+"Massachusetts","eawpew","Eastern Wood-Pewee","Contopus virens",0.73,0.35,0,0.36,"breeding","06-14",0.7836,"28 of 37","Forests:  Temperate Eastern",NA
+"Massachusetts","eursta","European Starling","Sturnus vulgaris",0.04,0.04,0.09,0.05,"nonbreeding","12-27",0.163,"41 of 48","Open Country:  Developed/Disturbed",NA
+"Massachusetts","evegro","Evening Grosbeak","Coccothraustes vespertinus",0,0.15,0.07,0.02,"postbreeding_migration","11-08",0.3465,NA,"Forests:  Boreal","Forests:  Temperate Western"
+"Massachusetts","fiespa","Field Sparrow","Spizella pusilla",0.21,0.31,0.14,0.26,"postbreeding_migration","10-18",0.4638,"30 of 39","Open Country:  Habitat Mosaic","Forests:  Temperate Eastern"
+"Massachusetts","fiscro","Fish Crow","Corvus ossifragus",0.74,0,0.51,0,"unidentified","03-08",1.639,"20 of 30","Open Country:  Habitat Mosaic","Wetlands:  Generalist"
+"Massachusetts","forter","Forster's Tern","Sterna forsteri",0.01,0.21,0,0,"postbreeding_migration","09-13",0.4999,"36 of 36","Wetlands:  Freshwater Marsh",NA
+"Massachusetts","foxspa","Fox Sparrow","Passerella iliaca",0,0.14,0.06,0.06,"postbreeding_migration","11-15",0.8807,NA,"Forests:  Boreal","Forests:  Temperate Western"
+"Massachusetts","gadwal","Gadwall","Mareca strepera",0.01,0.01,0.01,0.01,"postbreeding_migration","12-06",0.01976,"19 of 19","Wetlands:  Seasonally Wet Grasslands","Wetlands:  Freshwater Marsh"
+"Massachusetts","gbbgul","Great Black-backed Gull","Larus marinus",3.53,0,2.77,0,"breeding","06-21",4.274,"1 of 14","Coasts:  Beach and Estuary","Wetlands:  Lakes and Rivers"
+"Massachusetts","glagul","Glaucous Gull","Larus hyperboreus",0,0,0.01,0,"unidentified","02-01",0.01729,NA,"Coasts:  Cliffs and Islands","Wetlands:  Tundra"
+"Massachusetts","gloibi","Glossy Ibis","Plegadis falcinellus",0.02,0,0,0.01,"breeding","06-28",0.03582,"11 of 14","Coasts:  Saltmarsh","Wetlands:  Freshwater Marsh"
+"Massachusetts","gnwtea","Green-winged Teal","Anas crecca",0,0.01,0,0.01,"prebreeding_migration","03-29",0.0313,NA,"Wetlands:  Generalist",NA
+"Massachusetts","gockin","Golden-crowned Kinglet","Regulus satrapa",0.01,0.24,0.38,0.36,"prebreeding_migration","04-12",0.6166,"27 of 27","Forests:  Boreal","Forests:  Temperate Western"
+"Massachusetts","graspa","Grasshopper Sparrow","Ammodramus savannarum",0.01,0.01,0,0.01,"postbreeding_migration","09-13",0.02343,"40 of 40","Grasslands:  Temperate",NA
+"Massachusetts","grbher3","Great Blue Heron","Ardea herodias",0.52,0.36,0.1,0.34,"breeding","06-07",0.5905,"39 of 49","Wetlands:  Generalist","Coasts:  Saltmarsh"
+"Massachusetts","grcfly","Great Crested Flycatcher","Myiarchus crinitus",0.6,0.34,0,0.37,"breeding","07-26",0.6883,"31 of 39","Forests:  Temperate Eastern",NA
+"Massachusetts","grecor","Great Cormorant","Phalacrocorax carbo",0,0,0.01,0.01,"nonbreeding","03-15",0.01832,NA,"Coasts:  Cliffs and Islands","Coasts:  Marine Waters"
+"Massachusetts","greegr","Great Egret","Ardea alba",0.02,0.01,0,0.01,"postbreeding_migration","09-13",0.02651,"33 of 38","Wetlands:  Generalist","Coasts:  Saltmarsh"
+"Massachusetts","gresca","Greater Scaup","Aythya marila",0,0.16,0.57,0.09,"nonbreeding","12-27",0.7971,NA,"Wetlands:  Tundra",NA
+"Massachusetts","greyel","Greater Yellowlegs","Tringa melanoleuca",0.01,0.12,0,0.08,"postbreeding_migration","11-01",0.4005,"8 of 8","Wetlands:  Boreal",NA
+"Massachusetts","grhowl","Great Horned Owl","Bubo virginianus",0.2,0.2,0.2,0.2,"resident","year round resident",NA,"36 of 49","Open Country:  Habitat Mosaic",NA
+"Massachusetts","grnher","Green Heron","Butorides virescens",0.34,0.14,0,0.26,"prebreeding_migration","05-17",0.5125,"27 of 42","Wetlands:  Freshwater Marsh",NA
+"Massachusetts","grycat","Gray Catbird","Dumetella carolinensis",2.46,1.96,0.12,1.59,"postbreeding_migration","08-09",2.761,"12 of 46","Forests:  Temperate Eastern","Forests:  Temperate Western"
+"Massachusetts","gycthr","Gray-cheeked Thrush","Catharus minimus",0,0.01,0,0,"prebreeding_migration","05-24",0.09062,NA,"Forests:  Boreal",NA
+"Massachusetts","haiwoo","Hairy Woodpecker","Dryobates villosus",0.38,0.38,0.38,0.38,"resident","year round resident",NA,"40 of 49","Forests:  Generalist",NA
+"Massachusetts","harduc","Harlequin Duck","Histrionicus histrionicus",0,0.04,0.03,0.02,"postbreeding_migration","11-15",0.2504,NA,"Wetlands:  Lakes and Rivers","Coasts:  Beach and Estuary"
+"Massachusetts","hergul","Herring Gull","Larus argentatus",0.48,0.56,1.52,0.42,"nonbreeding","12-27",1.722,"5 of 19","Coasts:  Beach and Estuary","Wetlands:  Lakes and Rivers"
+"Massachusetts","herthr","Hermit Thrush","Catharus guttatus",0.13,0.46,0.29,0.28,"prebreeding_migration","04-12",1.586,"21 of 27","Forests:  Temperate Generalist",NA
+"Massachusetts","hoomer","Hooded Merganser","Lophodytes cucullatus",0.25,0.8,2.71,1.79,"prebreeding_migration","03-08",4.622,"12 of 29","Wetlands:  Forested","Wetlands:  Lakes and Rivers"
+"Massachusetts","hoowar","Hooded Warbler","Setophaga citrina",0.01,0,0,0,"prebreeding_migration","05-17",0.01245,"27 of 27","Forests:  Temperate Eastern",NA
+"Massachusetts","horgre","Horned Grebe","Podiceps auritus",0,0.27,0.66,0.19,"prebreeding_migration","03-29",1.163,NA,"Wetlands:  Freshwater Marsh",NA
+"Massachusetts","horlar","Horned Lark","Eremophila alpestris",0,0,0.02,0.01,"postbreeding_migration","11-22",0.03277,NA,"Grasslands:  Temperate","Tundra:  Arctic"
+"Massachusetts","houfin","House Finch","Haemorhous mexicanus",0.25,0.25,0.25,0.25,"resident","year round resident",NA,"28 of 49","Open Country:  Habitat Mosaic","Aridlands:  Desert Scrub"
+"Massachusetts","houspa","House Sparrow","Passer domesticus",0.02,0.02,0.02,0.02,"resident","year round resident",NA,"32 of 39","Open Country:  Developed/Disturbed",NA
+"Massachusetts","houwre","House Wren","Troglodytes aedon",0.09,0.06,0,0.04,"postbreeding_migration","09-13",0.1418,"29 of 42","Forests:  Generalist","Open Country:  Developed/Disturbed"
+"Massachusetts","hudgod","Hudsonian Godwit","Limosa haemastica",0,0.01,0,0,"postbreeding_migration","08-09",0.0585,NA,"Wetlands:  Boreal",NA
+"Massachusetts","indbun","Indigo Bunting","Passerina cyanea",0.13,0.09,0,0.09,"prebreeding_migration","05-24",0.167,"33 of 40","Forests:  Temperate Eastern",NA
+"Massachusetts","killde","Killdeer","Charadrius vociferus",0.11,0.08,0,0.11,"postbreeding_migration","10-11",0.2129,"42 of 48","Open Country:  Habitat Mosaic","Wetlands:  Generalist"
+"Massachusetts","kinrai4","King Rail","Rallus elegans",0.01,0,0,0,"breeding","06-28",0.01721,"17 of 17","Wetlands:  Freshwater Marsh",NA
+"Massachusetts","laugul","Laughing Gull","Leucophaeus atricilla",0.45,1.06,0,0.11,"postbreeding_migration","09-13",2.122,"13 of 19","Coasts:  Beach and Estuary","Coasts:  Marine Waters"
+"Massachusetts","lbbgul","Lesser Black-backed Gull","Larus fuscus",0.01,0.03,0.01,0.01,"postbreeding_migration","09-20",0.08042,"5 of 5","Coasts:  Beach and Estuary","Coasts:  Marine Waters"
+"Massachusetts","leabit","Least Bittern","Ixobrychus exilis",0.02,0.01,0,0.03,"prebreeding_migration","05-17",0.06924,"32 of 35","Wetlands:  Freshwater Marsh",NA
+"Massachusetts","leafly","Least Flycatcher","Empidonax minimus",0.13,0.08,0,0.22,"prebreeding_migration","05-03",0.9649,"13 of 22","Forests:  Temperate Eastern","Forests:  Temperate Western"
+"Massachusetts","leasan","Least Sandpiper","Calidris minutilla",0,0.11,0,0.05,"postbreeding_migration","08-23",0.2978,NA,"Wetlands:  Tundra",NA
+"Massachusetts","leater1","Least Tern","Sternula antillarum",3.48,2.31,0,2.09,"breeding","07-19",4.137,"6 of 31","Coasts:  Beach and Estuary","Wetlands:  Lakes and Rivers"
+"Massachusetts","lessca","Lesser Scaup","Aythya affinis",0,0.02,0.07,0.01,"nonbreeding","01-04",0.1127,NA,"Wetlands:  Lakes and Rivers","Wetlands:  Freshwater Marsh"
+"Massachusetts","lesyel","Lesser Yellowlegs","Tringa flavipes",0,0.02,0,0,"postbreeding_migration","08-23",0.06469,NA,"Wetlands:  Boreal",NA
+"Massachusetts","linspa","Lincoln's Sparrow","Melospiza lincolnii",0,0.07,0,0.01,"postbreeding_migration","09-27",0.3054,NA,"Wetlands:  Boreal","Forests:  Temperate Western"
+"Massachusetts","lotduc","Long-tailed Duck","Clangula hyemalis",0,0.58,1.59,0.46,"unidentified","01-04",28.68,NA,"Wetlands:  Tundra",NA
+"Massachusetts","louwat","Louisiana Waterthrush","Parkesia motacilla",0.97,0.26,0,0.57,"prebreeding_migration","05-03",1.094,"22 of 34","Wetlands:  Lakes and Rivers","Forests:  Temperate Eastern"
+"Massachusetts","magwar","Magnolia Warbler","Setophaga magnolia",0.04,0.21,0,0.25,"prebreeding_migration","05-10",0.9057,"10 of 13","Forests:  Boreal","Forests:  Temperate Eastern"
+"Massachusetts","mallar3","Mallard","Anas platyrhynchos",0.08,0.04,0.06,0.05,"breeding","07-05",0.1054,"27 of 48","Wetlands:  Generalist",NA
+"Massachusetts","marwre","Marsh Wren","Cistothorus palustris",0.1,0.08,0.08,0.1,"nonbreeding","12-27",0.2965,"28 of 38","Wetlands:  Freshwater Marsh",NA
+"Massachusetts","merlin","Merlin","Falco columbarius",0,0.07,0.14,0.05,"postbreeding_migration","10-11",0.4574,NA,"Forests:  Boreal","Open Country:  Habitat Mosaic"
+"Massachusetts","moudov","Mourning Dove","Zenaida macroura",0.17,0.23,0.29,0.23,"nonbreeding","02-15",0.3344,"43 of 48","Open Country:  Habitat Mosaic","Open Country:  Developed/Disturbed"
+"Massachusetts","mouwar","Mourning Warbler","Geothlypis philadelphia",0.01,0.03,0,0.16,"prebreeding_migration","05-17",0.5469,"11 of 11","Forests:  Boreal","Forests:  Temperate Eastern"
+"Massachusetts","mutswa","Mute Swan","Cygnus olor",0.14,0.14,0.22,0.16,"nonbreeding","12-27",0.2443,"3 of 10","Wetlands:  Generalist",NA
+"Massachusetts","naswar","Nashville Warbler","Leiothlypis ruficapilla",0,0.11,0,0.13,"prebreeding_migration","05-10",0.4531,NA,"Forests:  Boreal","Forests:  Temperate Western"
+"Massachusetts","norcar","Northern Cardinal","Cardinalis cardinalis",0.3,0.3,0.3,0.3,"resident","year round resident",NA,"30 of 40","Open Country:  Habitat Mosaic","Aridlands:  Desert Scrub"
+"Massachusetts","norfli","Northern Flicker","Colaptes auratus",0.25,0.24,0.17,0.27,"prebreeding_migration","04-12",0.4393,"39 of 49","Forests:  Generalist",NA
+"Massachusetts","norhar2","Northern Harrier","Circus hudsonius",0.03,0.05,0.08,0.04,"nonbreeding","01-04",0.08803,"20 of 24","Grasslands:  Temperate","Wetlands:  Freshwater Marsh"
+"Massachusetts","normoc","Northern Mockingbird","Mimus polyglottos",0.07,0.11,0.13,0.08,"nonbreeding","01-04",0.1527,"32 of 40","Open Country:  Habitat Mosaic",NA
+"Massachusetts","norpar","Northern Parula","Setophaga americana",0,0.44,0,0.22,"postbreeding_migration","09-27",1.175,NA,"Forests:  Temperate Eastern","Forests:  Boreal"
+"Massachusetts","norshr4","Northern Shrike","Lanius borealis",0,0,0.02,0.01,"nonbreeding","12-27",0.03034,NA,"Forests:  Boreal","Tundra:  Arctic"
+"Massachusetts","norwat","Northern Waterthrush","Parkesia noveboracensis",0.07,0.09,0,0.19,"prebreeding_migration","05-03",1.872,"9 of 17","Forests:  Boreal","Forests:  Temperate Eastern"
+"Massachusetts","nrwswa","Northern Rough-winged Swallow","Stelgidopteryx serripennis",0.2,0.01,0,0.11,"prebreeding_migration","05-03",0.301,"42 of 48","Open Country Aerial:  Habitat Mosaic","Wetlands Aerial:  Lakes and Rivers"
+"Massachusetts","nstspa","Nelson's Sparrow","Ammospiza nelsoni",0,0.07,0.01,0,"postbreeding_migration","10-18",1.238,NA,"Wetlands:  Seasonally Wet Grasslands","Coasts:  Saltmarsh"
+"Massachusetts","nswowl","Northern Saw-whet Owl","Aegolius acadicus",0.02,1.86,10.39,0,"nonbreeding","01-11",22.14,"16 of 19","Forests:  Boreal","Forests:  Temperate Western"
+"Massachusetts","olsfly","Olive-sided Flycatcher","Contopus cooperi",0,0.04,0,0.02,"postbreeding_migration","09-06",0.1864,NA,"Forests:  Boreal","Forests:  Temperate Western"
+"Massachusetts","orcori","Orchard Oriole","Icterus spurius",0.14,0.02,0,0.15,"prebreeding_migration","05-10",0.3028,"36 of 38","Forests:  Temperate Eastern",NA
+"Massachusetts","orcwar","Orange-crowned Warbler","Leiothlypis celata",0,0.01,0.01,0,"postbreeding_migration","10-18",0.04715,NA,"Forests:  Temperate Western","Forests:  Boreal"
+"Massachusetts","osprey","Osprey","Pandion haliaetus",1.08,0.38,0,0.64,"prebreeding_migration","04-12",1.476,"13 of 46","Wetlands:  Lakes and Rivers","Coasts:  Saltmarsh"
+"Massachusetts","ovenbi1","Ovenbird","Seiurus aurocapilla",1.18,0.45,0,1.19,"prebreeding_migration","05-03",2.672,"10 of 34","Forests:  Temperate Eastern","Forests:  Boreal"
+"Massachusetts","palwar","Palm Warbler","Setophaga palmarum",0,0.44,0.01,0.74,"prebreeding_migration","04-19",3.948,NA,"Wetlands:  Boreal",NA
+"Massachusetts","parjae","Parasitic Jaeger","Stercorarius parasiticus",0.01,0.28,0,0.01,"postbreeding_migration","10-11",4.4,"2 of 2","Wetlands:  Tundra","Tundra:  Arctic"
+"Massachusetts","perfal","Peregrine Falcon","Falco peregrinus",0.01,0.05,0.04,0.02,"postbreeding_migration","10-11",0.1854,"24 of 24","Open Country:  Habitat Mosaic","Open Country:  Developed/Disturbed"
+"Massachusetts","phivir","Philadelphia Vireo","Vireo philadelphicus",0,0.19,0,0,"postbreeding_migration","09-20",1.286,NA,"Forests:  Boreal",NA
+"Massachusetts","pibgre","Pied-billed Grebe","Podilymbus podiceps",0,0.03,0.01,0.02,"postbreeding_migration","10-25",0.07514,NA,"Wetlands:  Freshwater Marsh",NA
+"Massachusetts","pilwoo","Pileated Woodpecker","Dryocopus pileatus",0.3,0.3,0.3,0.3,"resident","year round resident",NA,"34 of 40","Forests:  Temperate Generalist",NA
+"Massachusetts","pinsis","Pine Siskin","Spinus pinus",0,0.21,0.01,0,"postbreeding_migration","10-11",0.8145,NA,"Forests:  Boreal","Forests:  Temperate Western"
+"Massachusetts","pinwar","Pine Warbler","Setophaga pinus",1.67,0.62,0.05,0.71,"prebreeding_migration","04-19",2.362,"16 of 32","Forests:  Temperate Eastern",NA
+"Massachusetts","pipplo","Piping Plover","Charadrius melodus",24.75,9.02,0,14.23,"postbreeding_migration","07-05",28.68,"1 of 20","Coasts:  Beach and Estuary","Wetlands:  Lakes and Rivers"
+"Massachusetts","pomjae","Pomarine Jaeger","Stercorarius pomarinus",0,0.01,0,0,"unidentified","12-27",4.441,NA,"Wetlands:  Tundra",NA
+"Massachusetts","prawar","Prairie Warbler","Setophaga discolor",1.5,0.68,0,0.67,"breeding","07-05",2.589,"17 of 29","Forests:  Temperate Eastern",NA
+"Massachusetts","purfin","Purple Finch","Haemorhous purpureus",0.17,1.14,0.18,0.23,"postbreeding_migration","09-20",1.799,"12 of 16","Forests:  Boreal","Forests:  Temperate Western"
+"Massachusetts","purmar","Purple Martin","Progne subis",0.01,0,0,0,"breeding","05-17",0.0279,"40 of 40","Open Country Aerial:  Habitat Mosaic","Wetlands Aerial:  Lakes and Rivers"
+"Massachusetts","pursan","Purple Sandpiper","Calidris maritima",0,0.06,0.45,0.22,"prebreeding_migration","05-03",0.7459,NA,"Wetlands:  Tundra","Tundra:  Arctic"
+"Massachusetts","rebmer","Red-breasted Merganser","Mergus serrator",0,0.83,1.6,0.86,"prebreeding_migration","04-12",2.617,NA,"Wetlands:  Tundra","Wetlands:  Boreal"
+"Massachusetts","rebnut","Red-breasted Nuthatch","Sitta canadensis",0.22,0.35,0.43,0.32,"nonbreeding","11-29",0.674,"20 of 30","Forests:  Boreal","Forests:  Temperate Western"
+"Massachusetts","rebwoo","Red-bellied Woodpecker","Melanerpes carolinus",0.37,0.37,0.37,0.37,"resident","year round resident",NA,"29 of 38","Forests:  Temperate Eastern",NA
+"Massachusetts","redcro","Red Crossbill","Loxia curvirostra",0.01,0.1,0.19,0.07,"postbreeding_migration","11-22",0.6083,"26 of 26","Forests:  Temperate Generalist",NA
+"Massachusetts","redkno","Red Knot","Calidris canutus",0.14,0.17,0,0.01,"postbreeding_migration","08-30",0.4283,"5 of 8","Tundra:  Arctic",NA
+"Massachusetts","reevir1","Red-eyed Vireo","Vireo olivaceus",0.52,0.41,0,0.39,"postbreeding_migration","09-27",0.7206,"25 of 42","Forests:  Temperate Generalist",NA
+"Massachusetts","rengre","Red-necked Grebe","Podiceps grisegena",0,0.02,0.26,0.04,"nonbreeding","01-04",0.3509,NA,"Wetlands:  Lakes and Rivers",NA
+"Massachusetts","reshaw","Red-shouldered Hawk","Buteo lineatus",0.52,0.49,0.17,0.47,"prebreeding_migration","03-22",0.6583,"26 of 38","Forests:  Temperate Eastern","Forests:  Temperate Western"
+"Massachusetts","rethaw","Red-tailed Hawk","Buteo jamaicensis",0.21,0.22,0.23,0.23,"prebreeding_migration","03-15",0.3124,"43 of 49","Open Country:  Habitat Mosaic",NA
+"Massachusetts","retloo","Red-throated Loon","Gavia stellata",0,0.44,1.7,1.18,"prebreeding_migration","04-05",13.94,NA,"Wetlands:  Tundra","Wetlands:  Boreal"
+"Massachusetts","rewbla","Red-winged Blackbird","Agelaius phoeniceus",0.32,0.09,0.02,0.14,"breeding","07-12",0.3626,"39 of 48","Open Country:  Habitat Mosaic","Wetlands:  Freshwater Marsh"
+"Massachusetts","ribgul","Ring-billed Gull","Larus delawarensis",0.15,0.38,0.42,0.27,"postbreeding_migration","11-15",0.6284,"26 of 42","Wetlands:  Generalist",NA
+"Massachusetts","rinduc","Ring-necked Duck","Aythya collaris",0,0.29,0.34,0.33,"prebreeding_migration","03-15",0.9105,NA,"Wetlands:  Boreal",NA
+"Massachusetts","robgro","Rose-breasted Grosbeak","Pheucticus ludovicianus",0.79,0.54,0,0.57,"postbreeding_migration","09-13",1.308,"13 of 27","Forests:  Temperate Eastern",NA
+"Massachusetts","rocpig","Rock Pigeon","Columba livia",0.01,0.01,0.01,0.01,"resident","year round resident",NA,"40 of 40","Open Country:  Developed/Disturbed",NA
+"Massachusetts","rthhum","Ruby-throated Hummingbird","Archilochus colubris",0.54,0.36,0,0.42,"prebreeding_migration","05-10",0.7899,"27 of 37","Forests:  Temperate Eastern",NA
+"Massachusetts","ruckin","Ruby-crowned Kinglet","Corthylio calendula",0,0.11,0.01,0.08,"prebreeding_migration","04-19",0.413,NA,"Forests:  Boreal","Forests:  Temperate Western"
+"Massachusetts","rudduc","Ruddy Duck","Oxyura jamaicensis",0,0.16,0.06,0.01,"postbreeding_migration","11-15",0.3515,NA,"Wetlands:  Seasonally Wet Grasslands","Wetlands:  Freshwater Marsh"
+"Massachusetts","rudtur","Ruddy Turnstone","Arenaria interpres",0.06,0.11,0.02,0.27,"prebreeding_migration","05-31",1.697,"14 of 19","Coasts:  Tundra","Wetlands:  Tundra"
+"Massachusetts","rufgro","Ruffed Grouse","Bonasa umbellus",0.04,0.04,0.04,0.04,"resident","year round resident",NA,"20 of 23","Forests:  Temperate Generalist",NA
+"Massachusetts","rusbla","Rusty Blackbird","Euphagus carolinus",0,0.16,0.02,0.17,"prebreeding_migration","04-12",1.007,NA,"Wetlands:  Boreal",NA
+"Massachusetts","sander","Sanderling","Calidris alba",0.09,2.51,0.73,0.46,"unidentified","08-02",6.103,"11 of 17","Tundra:  Arctic","Wetlands:  Tundra"
+"Massachusetts","savspa","Savannah Sparrow","Passerculus sandwichensis",0.01,0.18,0.04,0.1,"postbreeding_migration","10-11",0.7745,"25 of 25","Grasslands:  Temperate","Tundra:  Arctic"
+"Massachusetts","scatan","Scarlet Tanager","Piranga olivacea",1.96,0.68,0,0.91,"breeding","07-26",2.195,"14 of 34","Forests:  Temperate Eastern",NA
+"Massachusetts","seaspa","Seaside Sparrow","Ammospiza maritima",0.04,0.02,0,0,"postbreeding_migration","10-04",0.1181,"16 of 16","Coasts:  Saltmarsh",NA
+"Massachusetts","semplo","Semipalmated Plover","Charadrius semipalmatus",0,1.24,0,0.04,"postbreeding_migration","08-16",6.142,NA,"Coasts:  Beach and Estuary","Tundra:  Arctic"
+"Massachusetts","semsan","Semipalmated Sandpiper","Calidris pusilla",0.02,0.25,0,0.06,"postbreeding_migration","07-26",0.7773,"8 of 15","Wetlands:  Tundra",NA
+"Massachusetts","shbdow","Short-billed Dowitcher","Limnodromus griseus",0.09,2.14,0,0.05,"postbreeding_migration","07-26",6.737,"14 of 20","Wetlands:  Boreal",NA
+"Massachusetts","sheowl","Short-eared Owl","Asio flammeus",0,0,0.01,0.01,"prebreeding_migration","03-15",0.04565,NA,"Tundra:  Arctic","Grasslands:  Temperate"
+"Massachusetts","shshaw","Sharp-shinned Hawk","Accipiter striatus",0.04,0.28,0.35,0.47,"prebreeding_migration","05-03",0.7287,"27 of 32","Forests:  Temperate Generalist",NA
+"Massachusetts","snobun","Snow Bunting","Plectrophenax nivalis",0,0.03,0.04,0,"postbreeding_migration","11-15",0.08483,NA,"Tundra:  Arctic",NA
+"Massachusetts","snoegr","Snowy Egret","Egretta thula",0.03,0.04,0,0.01,"postbreeding_migration","08-30",0.08034,"22 of 32","Wetlands:  Generalist","Coasts:  Saltmarsh"
+"Massachusetts","snoowl1","Snowy Owl","Bubo scandiacus",0,0.04,0.14,0.14,"prebreeding_migration","05-03",2.061,NA,"Tundra:  Arctic",NA
+"Massachusetts","solsan","Solitary Sandpiper","Tringa solitaria",0,0.07,0,0.07,"prebreeding_migration","05-10",0.5913,NA,"Wetlands:  Boreal",NA
+"Massachusetts","sonspa","Song Sparrow","Melospiza melodia",0.88,1.09,0.5,0.87,"postbreeding_migration","10-11",1.782,"22 of 43","Open Country:  Habitat Mosaic",NA
+"Massachusetts","sora","Sora","Porzana carolina",0,0.01,0,0.01,"prebreeding_migration","04-26",0.1032,NA,"Wetlands:  Freshwater Marsh",NA
+"Massachusetts","sposan","Spotted Sandpiper","Actitis macularius",0.06,0.09,0,0.13,"prebreeding_migration","05-03",0.5475,"22 of 33","Wetlands:  Generalist",NA
+"Massachusetts","sstspa","Saltmarsh Sparrow","Ammospiza caudacuta",32.44,10.93,0,11.71,"breeding","08-23",41.59,"1 of 10","Coasts:  Saltmarsh",NA
+"Massachusetts","sursco","Surf Scoter","Melanitta perspicillata",0.01,2.82,2.67,0.58,"unidentified","01-04",11.43,"6 of 6","Wetlands:  Boreal",NA
+"Massachusetts","swaspa","Swamp Sparrow","Melospiza georgiana",0.47,0.92,0.23,0.8,"prebreeding_migration","04-19",2.141,"8 of 21","Wetlands:  Boreal","Wetlands:  Freshwater Marsh"
+"Massachusetts","swathr","Swainson's Thrush","Catharus ustulatus",0,0.28,0,0.03,"postbreeding_migration","10-04",1.132,NA,"Forests:  Boreal","Forests:  Temperate Western"
+"Massachusetts","tenwar","Tennessee Warbler","Leiothlypis peregrina",0,0.05,0,0.03,"postbreeding_migration","09-27",0.346,NA,"Forests:  Boreal",NA
+"Massachusetts","treswa","Tree Swallow","Tachycineta bicolor",0.51,0.16,0,0.31,"postbreeding_migration","09-06",5.274,"23 of 47","Wetlands Aerial:  Generalist",NA
+"Massachusetts","tuftit","Tufted Titmouse","Baeolophus bicolor",1.11,1.11,1.11,1.11,"resident","year round resident",NA,"23 of 35","Forests:  Temperate Eastern",NA
+"Massachusetts","turvul","Turkey Vulture","Cathartes aura",0.05,0.03,0.01,0.05,"prebreeding_migration","04-19",0.06059,"45 of 48","Open Country:  Habitat Mosaic",NA
+"Massachusetts","uplsan","Upland Sandpiper","Bartramia longicauda",0.01,0,0,0,"breeding","06-07",0.02744,"22 of 22","Grasslands:  Temperate",NA
+"Massachusetts","veery","Veery","Catharus fuscescens",1.85,2.9,0,2.35,"postbreeding_migration","09-06",7.161,"7 of 29","Forests:  Temperate Eastern","Forests:  Temperate Western"
+"Massachusetts","virrai","Virginia Rail","Rallus limicola",1.48,0.66,1.27,6,"prebreeding_migration","04-26",12.63,"13 of 35","Wetlands:  Freshwater Marsh",NA
+"Massachusetts","warvir","Warbling Vireo","Vireo gilvus",0.32,0.27,0,0.29,"prebreeding_migration","05-03",0.5206,"28 of 43","Forests:  Temperate Eastern","Forests:  Temperate Western"
+"Massachusetts","whbnut","White-breasted Nuthatch","Sitta carolinensis",1.1,1.1,1.1,1.1,"resident","year round resident",NA,"26 of 48","Forests:  Temperate Eastern","Forests:  Temperate Western"
+"Massachusetts","whcspa","White-crowned Sparrow","Zonotrichia leucophrys",0,0.01,0,0,"postbreeding_migration","10-25",0.03818,NA,"Tundra:  Arctic","Forests:  Boreal"
+"Massachusetts","whimbr","Whimbrel","Numenius phaeopus",0,0.02,0,0,"postbreeding_migration","08-09",0.08929,NA,"Tundra:  Arctic","Wetlands:  Boreal"
+"Massachusetts","whtspa","White-throated Sparrow","Zonotrichia albicollis",0.01,0.71,0.3,0.17,"postbreeding_migration","10-11",1.574,"9 of 9","Forests:  Boreal",NA
+"Massachusetts","whwsco2","White-winged Scoter","Melanitta deglandi",0.02,11.27,1.75,1.06,"postbreeding_migration","11-15",43.12,"4 of 6","Wetlands:  Lakes and Rivers",NA
+"Massachusetts","wilfly","Willow Flycatcher","Empidonax traillii",0.46,0.13,0,0.74,"prebreeding_migration","05-24",0.8703,"20 of 39","Open Country:  Habitat Mosaic","Forests:  Temperate Western"
+"Massachusetts","willet1","Willet","Tringa semipalmata",0.84,0.45,0,0.3,"postbreeding_migration","07-12",1.092,"14 of 30","Wetlands:  Seasonally Wet Grasslands","Coasts:  Saltmarsh"
+"Massachusetts","wilsni1","Wilson's Snipe","Gallinago delicata",0,0.01,0.01,0.02,"prebreeding_migration","04-05",0.428,NA,"Wetlands:  Generalist",NA
+"Massachusetts","wiltur","Wild Turkey","Meleagris gallopavo",0.4,0.4,0.4,0.4,"resident","year round resident",NA,"41 of 49","Forests:  Temperate Generalist",NA
+"Massachusetts","winwre3","Winter Wren","Troglodytes hiemalis",0.11,0.82,0.88,0.51,"prebreeding_migration","03-22",2.666,"10 of 14","Forests:  Boreal","Forests:  Temperate Eastern"
+"Massachusetts","wlswar","Wilson's Warbler","Cardellina pusilla",0,0.01,0,0.01,"prebreeding_migration","05-17",0.1278,NA,"Forests:  Boreal","Forests:  Temperate Western"
+"Massachusetts","woewar1","Worm-eating Warbler","Helmitheros vermivorum",0.24,0.01,0,0.15,"prebreeding_migration","05-17",0.3885,"23 of 26","Forests:  Temperate Eastern",NA
+"Massachusetts","wooduc","Wood Duck","Aix sponsa",1.21,1.55,0.01,0.86,"postbreeding_migration","10-25",2.795,"27 of 48","Wetlands:  Forested","Forests:  Temperate Eastern"
+"Massachusetts","woothr","Wood Thrush","Hylocichla mustelina",0.94,0.71,0,0.7,"postbreeding_migration","08-30",2.471,"24 of 36","Forests:  Temperate Eastern",NA
+"Massachusetts","y00475","American Coot","Fulica americana",0,0.01,0,0,"postbreeding_migration","12-06",0.01413,NA,"Wetlands:  Freshwater Marsh",NA
+"Massachusetts","y00478","Iceland Gull","Larus glaucoides",0,0,0.03,0.02,"prebreeding_migration","03-01",0.07286,NA,"Coasts:  Cliffs and Islands","Coasts:  Marine Waters"
+"Massachusetts","ycnher","Yellow-crowned Night Heron","Nyctanassa violacea",0,0.02,0,0,"postbreeding_migration","08-23",0.06034,NA,"Wetlands:  Generalist","Coasts:  Mangroves"
+"Massachusetts","yebcha","Yellow-breasted Chat","Icteria virens",0,0.01,0.03,0,"nonbreeding","12-20",0.1102,NA,"Forests:  Temperate Eastern","Forests:  Temperate Western"
+"Massachusetts","yebcuc","Yellow-billed Cuckoo","Coccyzus americanus",0.08,0.02,0,0.16,"prebreeding_migration","05-24",0.2666,"35 of 40","Forests:  Temperate Eastern",NA
+"Massachusetts","yebfly","Yellow-bellied Flycatcher","Empidonax flaviventris",0,0.02,0,0.02,"prebreeding_migration","05-17",0.7401,NA,"Forests:  Boreal",NA
+"Massachusetts","yebsap","Yellow-bellied Sapsucker","Sphyrapicus varius",0.42,0.48,0.19,0.6,"prebreeding_migration","04-12",1.714,"10 of 20","Forests:  Boreal","Forests:  Temperate Eastern"
+"Massachusetts","yelwar","Yellow Warbler","Setophaga petechia",0.28,0.12,0,0.28,"prebreeding_migration","05-03",0.7553,"24 of 39","Forests:  Temperate Generalist","Wetlands:  Generalist"
+"Massachusetts","yerwar","Yellow-rumped Warbler","Setophaga coronata",0.03,0.21,0.06,0.11,"postbreeding_migration","10-18",0.7783,"22 of 23","Forests:  Boreal","Forests:  Temperate Western"
+"Massachusetts","yetvir","Yellow-throated Vireo","Vireo flavifrons",0.62,0.18,0,0.29,"prebreeding_migration","05-17",0.759,"27 of 37","Forests:  Temperate Eastern",NA
