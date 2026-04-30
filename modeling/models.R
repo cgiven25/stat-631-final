@@ -1,7 +1,7 @@
 cap <- tibble(read.csv("cap_data_sportrac.csv")) %>%
-  mutate(team = case_match(team, 
-                           "WAS" ~ "WSH", 
-                           "VGK" ~ "VEG", 
+  mutate(team = case_match(team,
+                           "WAS" ~ "WSH",
+                           "VGK" ~ "VEG",
                            .default = team)
   )
 
@@ -26,6 +26,7 @@ seasons <- c("2021_2022", "2022_2023", "2023_2024", "2024_2025", "2025_2026")
 # okay. like. the utah/arizona thing is causing missing values in cap data
 # cause my renaming happens before that join
 # but it's just 3 rows (the three observations before ARI changed to UTA) so i'm ignoring it for now
+  # yeah this is fine they suck so we dont have to worry about them too much lol
 # TODO: fix it
 full_data <- data.frame()
 for (s in seasons) {
@@ -44,6 +45,11 @@ for (s in seasons) {
 
   full_data <- bind_rows(full_data, season_data)
 }
+
+# case_when(
+#   if the year is 2021-2022 skip
+#   if the year is 22-23, 1 for if madeplayoffs=1 for team specific when year was year before...
+# )
 
 train <- full_data %>%
   filter(season %in% seasons[1:4])
@@ -65,3 +71,30 @@ points(abs(predicted.linear - test$MadePlayoffs), col = "red")
 sum(abs(predicted.linear - test$MadePlayoffs) < abs(predicted - test$MadePlayoffs)) # 13. In 13/32 cases, multiple linear regression is performing better
 
 # TODO: ordinal regression
+
+
+# things to also do: predict if playoffs based on SOS, if playoffs last year, division?
+# maybe we can also rank division 1 through 4 based on accumulated points or something..?
+# also want to do that 3-2-1 W-OTW-SOW thing but they dont count the number of overtime games????
+# wait its on a different table my bad everyone
+# ill get that in one sec
+
+# predict points
+fit2 <- glm(PTS ~ AvAge + SOS + division + cap_space, family = "poisson", data=train)
+summary(fit2)
+# can we think abt comparing multiple models year by year predicting making playoffs (when this data is current year)
+# ploffs ~ AvAge + SOS + division + cap_space
+
+fit2122 <- glm(MadePlayoffs ~ AvAge + SOS + division + cap_space, family = "binomial", data=filter(full_data, season=="2021_2022"))
+summary(fit2122)
+#okay this sucks
+# what if we did madePlayoffs last year or something?
+fit2223 <- glm(MadePlayoffs ~ SOS + cap_space, family = "binomial", data=filter(full_data, season=="2022_2023"))
+summary(fit2223)
+# okay so this is still bad
+# i do think we need to explore last season (immediate last season) behavior
+# maybe i will try to wrangle coaching changes
+# the nhl is the worst league on the planet. there is no organized information for this
+fit2334
+fit2425
+fit2526
