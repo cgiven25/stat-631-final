@@ -46,10 +46,11 @@ for (s in seasons) {
   full_data <- bind_rows(full_data, season_data)
 }
 
-# case_when(
-#   if the year is 2021-2022 skip
-#   if the year is 22-23, 1 for if madeplayoffs=1 for team specific when year was year before...
-# )
+reg_ot <- read.csv("reg_ot.csv") %>%
+  mutate(season = ifelse(season=="2022_2021", "2021_2022", season))
+full_data_with_overtimes <- full_data %>%
+  full_join(reg_ot, by = c("name", "season")) %>%
+  na.omit()
 
 train <- full_data %>%
   filter(season %in% seasons[1:4])
