@@ -50,7 +50,10 @@ reg_ot <- read.csv("reg_ot.csv") %>%
   mutate(season = ifelse(season=="2022_2021", "2021_2022", season))
 full_data_with_overtimes <- full_data %>%
   full_join(reg_ot, by = c("name", "season")) %>%
-  na.omit()
+  na.omit() %>%
+  mutate(OTW = W - RW - SOW,
+         newpts = 3*RW + 2*OTW + 1*OL + 1.5*SOW + 0.5*SOL)
+
 
 train <- full_data %>%
   filter(season %in% seasons[1:4])
@@ -85,6 +88,10 @@ fit2 <- glm(PTS ~ AvAge + SOS + division + cap_space, family = "poisson", data=t
 summary(fit2)
 # can we think abt comparing multiple models year by year predicting making playoffs (when this data is current year)
 # ploffs ~ AvAge + SOS + division + cap_space
+fit3 <- glm(newpts ~ AvAge + SOS + division + cap_space, family = "poisson", data=full_data_with_overtimes)
+summary(fit3) #like okay
+fit4 <- glm(MadePlayoffs ~ OTW, family = "binomial", data=full_data_with_overtimes)
+summary(fit4) # interesting otw odds ratio 1.309964
 
 fit2122 <- glm(MadePlayoffs ~ AvAge + SOS + division + cap_space, family = "binomial", data=filter(full_data, season=="2021_2022"))
 summary(fit2122)
