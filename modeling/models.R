@@ -52,7 +52,7 @@ full_data_with_overtimes <- full_data %>%
   full_join(reg_ot, by = c("name", "season")) %>%
   na.omit() %>%
   mutate(OTW = W - RW - SOW,
-         newpts = 3*RW + 2*OTW + 1*OL + 1.5*SOW + 0.5*SOL)
+         newpts = 3*RW + 2*OTW + 1*OL + 2*SOW + 1*SOL)
 
 
 train <- full_data %>%
