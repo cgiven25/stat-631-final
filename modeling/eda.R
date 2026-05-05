@@ -23,6 +23,10 @@ means_data_season <- all_data %>%
             m_cap_space = mean(cap_space),
             m_ltir = mean(ltir))
 
+means_data_season_division <- all_data %>%
+  group_by(MadePlayoffs, season, division) %>%
+  summarize(m_PTS = mean(PTS))
+
 # averages for playoffs/not playoffs as a whole (i think years maybe more interesting)
 ggplot(means_data, aes(x=MadePlayoffs, y=m_AvAge, fill=as.factor(MadePlayoffs))) + geom_col()
 ggplot(means_data, aes(x=MadePlayoffs, y=m_SOS, fill=as.factor(MadePlayoffs))) + geom_col()
@@ -51,4 +55,8 @@ ggplot(data=means_data_season) +
   labs(title = "Average Cap in LTIR, per Season, grouped by Make/Not Make Playoffs", x="Season", y="Average Cap Space in LTIR (Dollars)", fill="MadePlayoffs")
 
 
-
+ggplot(data=means_data_season_division) +
+  geom_col(aes(x=season, y=m_PTS, fill=as.factor(MadePlayoffs)), position=position_dodge(1)) +
+  facet_grid(.~division) +
+  labs(title = "Average Points in Division, per Season, grouped by Make/Not Make Playoffs", x="Season", y="Average Points", fill="MadePlayoffs") +
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
