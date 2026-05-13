@@ -42,7 +42,7 @@ ggplot(data=means_data_season) +
 ggplot(data=means_data_season) +
   geom_col(aes(x=season, y=m_SOS, fill=as.factor(MadePlayoffs)), position = position_dodge(1)) +
   geom_hline(yintercept=c(-0.020625,0.019875), color=c("blue","red"), lty = "dashed") +
-  labs(title = "Average Strength of Season, per Season, grouped by Make/Not Make Playoffs", x="Season", y="Average Strength of Season", fill="MadePlayoffs")
+  labs(title = "Average Strength of Schedule, per Season, grouped by Make/Not Make Playoffs", x="Season", y="Average Strength of Season", fill="MadePlayoffs")
 
 ggplot(data=means_data_season) +
   geom_col(aes(x=season, y=m_cap_space, fill=as.factor(MadePlayoffs)), position = position_dodge(1)) +
@@ -59,4 +59,5 @@ ggplot(data=means_data_season_division) +
   geom_col(aes(x=season, y=m_PTS, fill=as.factor(MadePlayoffs)), position=position_dodge(1)) +
   facet_grid(.~division) +
   labs(title = "Average Points in Division, per Season, grouped by Make/Not Make Playoffs", x="Season", y="Average Points", fill="MadePlayoffs") +
-  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1))
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust=1)) +
+  coord_cartesian(ylim = c(50, NA))

@@ -1,0 +1,42 @@
+---
+title: "Final_report"
+format: pdf
+---
+
+```{r}
+#the ONLY restrictions are that this should be approximately 5 pages
+#there is no other information about the report
+```
+
+## Introduction
+Research question: can we predict which teams will make it into the nhl playoffs this year (25/26) given the past four years of data?
+
+## Data
+Hockeyreference + sportrac
+I’ll do an overview of the eda and what the data means
+As well as which stuff is collinear
+Basically we are looking at season summary information
+
+## Attempt 1
+Logistic regression + results
+It was bad
+Data are not independent
+We know how to calculate playoff/not playoff .. in shocking news it is hard to predict that without getting the exact data (points)
+Differences btw playoff/not playoff can be super small, even in points, depends on division/conference each year, etc. 
+
+## Attempt 2
+Predict points from season data
+Then rank
+This was better! We can explain away errors (panthers especially) and point out what our model does well and what it struggles with
+
+## Attempt 3?
+This is maybe what we do with new points
+A little counterintuitive, but what if we try to predict points where we weight regular season wins by 3pts OT/SO wins by 2 points (so we go in and change points for all training data) and then attempt 2 style predict and rank?
+Might not work, depends on if we have the time
+I’ll go in and fix points just not today
+
+## Conclusion/future
+Well it’s a hard problem
+Would be interesting to compare across decades
+Would love some mid-season checkins (how were teams doing first half/before trade deadline) or something? Different type of question/answer pair but could be interesting
+Goalie skill?
