@@ -48,10 +48,17 @@ for (s in seasons) {
 }
 
 reg_ot <- read.csv("reg_ot.csv") %>%
-  mutate(season = ifelse(season=="2022_2021", "2021_2022", season))
+  mutate(season = ifelse(season=="2022_2021", "2021_2022", season),
+         name = case_match(name,
+                           "Arizona Coyotes" ~ "Utah Mammoth",
+                           "Utah Hockey Club" ~ "Utah Mammoth",
+                           .default = name))
 full_data_with_overtimes <- full_data %>%
   full_join(reg_ot, by = c("name", "season")) %>%
-  na.omit()
+  mutate(OTW = W - RW,
+         points2 = 3*RW + 2*OTW + 2*SOW + OL + SOL)
+
+saveRDS(full_data_with_overtimes, "full_points_adjusted.RDS")
 
 full_data$W.binned <- cut(full_data$W, 4)
 

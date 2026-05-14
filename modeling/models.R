@@ -5,7 +5,6 @@ test <- readRDS("test.RDS")
 train <- readRDS("train.RDS")
 
 full <- rbind(train, test)
-# TODO: get range of all predictors to help with interpretation
 
 
 # -------------------------------
@@ -13,9 +12,6 @@ library(pROC)
 showROC <- function(model, response) {
   roc(test[, response], predict(model, newdata = test, type="response"), smooth = T, plot = T)
 }
-
-# TODO:
-# overtime stuff (ask Emma), currently not included in training/testing data
 
 # initial model (wanted to choose predictors we could know before season starts)
 # AvAge: higher average age performs worse? or better due to experience?
@@ -51,9 +47,9 @@ sum(pred.made == test$MadePlayoffs) # 22/32 predicted correctly
 # what if we try to predict points? once point rankings are figured out, playoffs are determined
 loglin <- glm(PTS ~ AvAge + SOS + division + cap_space + ltir, data = train, family = "poisson")
 summary(loglin)
-predict.pts <- predict(loglin, newdata = test, type="response")
-order <- as.integer(names(sort(predict.pts, decreasing=T)))
-sorted.pts <- test[order,c("name", "division", "conference", "MadePlayoffs")]
+predict.pts <- sort(predict(loglin, newdata = test, type="response"), decreasing = T)
+order <- as.integer(names(predict.pts))
+sorted.pts <- cbind(test[order,c("name", "division", "conference", "MadePlayoffs")], predict.pts)
 
 # --- justification detour ---
 
@@ -106,6 +102,7 @@ multinom.W <- multinom(W.binned ~ AvAge + SOS + division +  cap_space + ltir, da
 summary(multinom.W)
 pred.wbin <- predict(multinom.W, newdata = test)
 test.by.w <- cbind(test[,c("name", "W.binned", "MadePlayoffs")], predicted.bin = pred.wbin)
+sum(test.by.w[,"W.binned"] == test.by.w[,"predicted.bin"])
 View(test.by.w)
 # not great. no predicted teams in the highest bucket. buckets are bad, maybe?
 
@@ -126,3 +123,24 @@ cbind(w.bin = test.adj$W.binned.adj,
 
 # seems to me like our best model is the points loglinear model where we convert to playoffs by hand.
 # hard to tell without more data. 
+
+
+# report stuff
+full_with_ot <- readRDS("full_points_adjusted.RDS")
+train2 <- full_with_ot %>% filter(season != "2025_2026")
+test2 <- full_with_ot %>% filter(season == "2025_2026")
+
+loglin2 <- glm(points2 ~ AvAge + SOS + division + cap_space + ltir, data = train2, family = "poisson")
+predict.pts2 <- sort(predict(loglin2, newdata = test2, type="response"), decreasing=T)
+order2 <- as.integer(names(predict.pts2))
+sorted.pts2 <- cbind(test2[order,c("name", "division", "conference", "MadePlayoffs", "points2")], predict.pts2)
+
+# just doing this manually again
+sorted.pts2[sorted.pts2$division == "atlantic",] # Atlantic: Lightning, Senators, Sabres
+sorted.pts2[sorted.pts2$division == "metropolitan",] # Metro: Hurricanes, Capitals, Islanders
+sorted.pts2[sorted.pts2$division == "central",] # Central: Avalanche, Stars, Wild
+sorted.pts2[sorted.pts2$division == "pacific",] # Pacific: Oilers, Knights, Kings
+sorted.pts2[sorted.pts2$conference == "eastern",] # Eastern Wildcards: Bruins, Panthers
+sorted.pts2[sorted.pts2$conference == "western",] # Western Wildcards: Mammoth, Ducks
+# (it's exactly the same lol, in the same order)
+

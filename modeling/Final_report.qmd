@@ -17,15 +17,15 @@ In order to make the NHL season less fun, for this project we tried to predict w
 
 ## Data
 
-The NHL as an organization is not typically interested in sharing the data they acquire about games, so there are few places to get good, publicly available data. The website hockey-reference (h-r) has good season level data, but doesn't have easily scrapeable game by game data. The website capfriendly used to have good and up-to-date cap data, but it was purchased recently by the Washington Capitals, so sportrac was used as a replacement. It is fairly accurate, but it does not have detailed information on player salaries. Ultimately we end up with 44 variables to choose from. We will sort these into categories based on their presumed colinearity. 
+The NHL as an organization is not typically interested in sharing the data they acquire about games, so there are few places to get good, publicly available data. The website hockey-reference (h-r) has good season level data, but doesn't have easily scrapeable game by game data. The website capfriendly used to have good and up-to-date cap data, but it was purchased recently by the Washington Capitals, so sportrac was used as a replacement. It is fairly accurate, but it does not have detailed information on player salaries. Ultimately we end up with 44 variables to choose from. We will sort these into categories based on their presumed collinearity. 
 
-- General information: conference, division, average age (AvAge), games played (GP), season
-- Games-dependent: wins (W), losses (OL), points (PTS), points percentage (PTS.), shootout wins (SOW), shootout losses (SOL)
-- Goals-dependent: goals for (GF), goals against (GA), h-r rating (SRS), strength of schedule (SOS), goals for per game (GF.G), goals against per game (GA.G), power play goals (PP), power play percentage (PP.), power play goals against (PPA), penalty kill percentage (PK.), shorthanded goals (SH), shorthanded goals against (SHA), shooting percentage (S.), shots on goal (S), shots against (SA), save percentage (SV.), shutouts (SO)
-- Situation-dependent: powerplay opportunities (PPO), power play opportunities against (PPOA), penalty minutes per game (PIM.G), opponent penalty minutes per game (oPIM.G)
-- Cap-dependent: cap space, cap allocation (depends on season)
-- Money, but *not* cap-dependent: dollars in long-term injured reserve (litr)
-- Response: whether or not a team has made the playoffs, as 0 or 1 (MadePlayoffs)
+- **General information:** conference, division, average age (AvAge), games played (GP), season
+- **Games-dependent**: wins (W), losses (OL), points (PTS), points percentage (PTS.), shootout wins (SOW), shootout losses (SOL)
+- **Goals-dependent:** goals for (GF), goals against (GA), h-r rating (SRS), strength of schedule (SOS), goals for per game (GF.G), goals against per game (GA.G), power play goals (PP), power play percentage (PP.), power play goals against (PPA), penalty kill percentage (PK.), shorthanded goals (SH), shorthanded goals against (SHA), shooting percentage (S.), shots on goal (S), shots against (SA), save percentage (SV.), shutouts (SO)
+- **Situation-dependent:** powerplay opportunities (PPO), power play opportunities against (PPOA), penalty minutes per game (PIM.G), opponent penalty minutes per game (oPIM.G)
+- **Cap-dependent:** cap space, cap allocation (depends on season)
+- **Money, but *not* cap-dependent:** dollars in long-term injured reserve (litr)
+- **Response:** whether or not a team has made the playoffs, as 0 or 1 (MadePlayoffs)
 
 When selecting variables to use to predict whether or not a team has made the playoffs, we want to make sure we don't have multiple from each category, because we know that we will have colinearity issues. For example, using GF and SOS wouldn't work, since strength of schedule is dependent on the average goals for and opponent average goals for. We end up selecting average age, cap space, LTIR, SOS, and division. We chose average age because we were looking for some metric for describing the player composition of a team as more or less experienced, cap space as a way to describe how expensive (in general, but not always) or how talented players are, LTIR as a way to quantify major player injuries, SOS so that we could consider whether a team has a challenging path to the playoffs or not, and division as we're dealing with only five years of data and it would be reasonable to see trends for stronger or weaker groups of teams. We also looked at points, which we did not include in our first models since points are a near perfect predictor of MadePlayoffs. 
 
@@ -103,28 +103,47 @@ Finally we'll look at points over the last five years. We see obviously in @fig-
 
 Finally, it is *crucial* that we note our data are *not* independent. If my team wins all 82 games, no other team will win 82 games. The number of points, which does ultimately predict whether or not a team makes the playoffs, is not independent. In our group of predictors, SOS depends on the skill of other teams. We want to see what we can do with these models, but we remain cautious.
 
-## First Try
-> chris not sure how you want to organize these
-Logistic regression + results
-It was bad
-Data are not independent
+## First Attempts: Logistic Regression
 
-We think two main reasons why these models are struggling are because we're compressing a massive season's worth of data into very few metrics and the difference between make and miss playoffs can often be a single point or even a tiebreak. This "condition" is hard to diagnose, and its criteria in terms of points actually change every year, so it is understandable that predictors that aren't even points (our direct predictor) struggle. 
+Since our response `MakePlayoffs` is a binary variable, logistic regression is the natural choice of model. Our first model used only two predictors, `AvAge` and `SOS`. Using this model, we correctly predicted 19/32 of the playoff standings. 
 
-## Second Try
+We wanted more accuracy, so we decided to increase the model complexity. We used three new predictors in our second model: `division`, `cap_space`, and `ltir`. The results of the second model were a slight improvement: 22/32 correct standings. However, this model only predicted that ten teams would make the playoffs, which alerted us to a risk associated with predicting `MadePlayoffs` directly. We are not guaranteed to fill our playoff spots, or we may predict that too many teams make the playoffs.
 
-As a second attempt, we tried to predict points per team, so that we could then rank the teams within division and conference to select playoff teams by the NHL rules. We still used strategies from categorical data analysis, employing a log-linear model to predict points. 
+These models did not perform as well as we had hoped. We think this is for two main reasons: first, we're compressing a long and very complicated season into just a few metrics. Second, the difference between making and missing the playoffs can often be a single point, or even a tiebreak. The features that define a playoff team are both hard to diagnose and often overlap with teams that do not make the playoffs.
+
+> I feel like we should be including summary outputs or something but we're already running out of space as it is.
+> ROC curves, maybe? I haven't added them for now cause we'll need to talk about how to cut stuff for space. 
+
+
+>We think two main reasons why these models are struggling are because we're compressing a massive season's worth of data into very few metrics and the difference between make and miss playoffs can often be a single point or even a tiebreak. This "condition" is hard to diagnose, and its criteria in terms of points actually change every year, so it is understandable that predictors that aren't even points (our direct predictor) struggle. 
+
+## Attempt 2: Poisson Regression
+
+To guarantee that we found exactly the correct number of teams for the playoffs, we decided to predict points instead. Then, we can rank the teams within division and conference to select playoff teams by the NHL rules. We still used strategies from categorical data analysis, employing a log-linear model to predict points.
+
+This model was a substantial improvement: 26/32 of the playoff standings were predicted correctly. 6 teams were mismatched in the Eastern Conference for the '25-'26 season, and all of the teams in the Western Conference were correctly placed.
 
 >This was better! We can explain away errors (panthers especially) and point out what our model does well and what it struggles with
 
-## Attempt 3?
-buckets
-This is maybe what we do with new points
+## Attempt 3: Multinomial Logistic Regression with Win Categories
+
+We also looked at a multinomial model. We organized wins into four equal width buckets and tried multinomial logistic regression, using the team's win bucket as a response. It turns out that for the post-COVID seasons, every team in the top bucket made playoffs, and the vast majority of teams in the second highest bucket also made playoffs. If we could predict those two categories reliably, we could predict the playoff teams with decent accuracy. Unfortunately, this did not pan out. This model performed the worst of everything we tried, with only fourteen of thirty-two buckets correctly predicted. Trying to predict playoffs with that sort of performance would have been nearly impossible, so the analysis stopped there. 
+
+>This is maybe what we do with new points
 A little counterintuitive, but what if we try to predict points where we weight regular season wins by 3pts OT/SO wins by 2 points (so we go in and change points for all training data) and then attempt 2 style predict and rank?
 mutate(points2 = 3*RW + 2*OTW + 2*SOW + 1*OTL + 1*SOL), should be in full_data_with_overtimes with the reg wins
 Might not work, depends on if we have the time
 
+
+## Attempt 4: Recalculate Points and Try Method 2 Again
+There is substantial debate about how the NHL calculates points, since the current format sometimes results in teams with relatively few regulation wins earning playoff spots due to a high number of overtime games. One commonly proposed alternative points system is the 3-2-1 system: 3 points for a regulation win, 2 points for overtime and shootout wins, and one point for overtime and shootout losses. For this final model, we recalculated points according to a 3-2-1 system and used it as the response in a log-linear model.
+
+The results were identical to our second attempt. The team rankings were exactly the same, so our playoff teams were the same.
+
+> check me on this explanation plz
+
 ## Conclusion/future
 
 Ultimately we find that predicting playoffs is a tough problem to solve and we probably shouldn't drop out of school. Categorical data analysis here may not be the right strategy (in fact, competing models don't use this strategy) since our categories have too many overlapping features. There are also of course lots of team changes happening during the season that are hard to keep track of, like lineups and injuries and things happening on opposing teams, which is very specific data, but even major change checkpoints like coaching changes or results of a trade deadline were not included. With a dynamic sport and a long season, it is not unreasonable to conclude that season-level data based on some sweeping averages is insufficient. In addition, we still have this issue of non-independence that is a problem for the models we're using here. 
+
 > probably something about future models
