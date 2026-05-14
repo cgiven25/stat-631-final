@@ -36,7 +36,7 @@ ggplot(means_data, aes(x=MadePlayoffs, y=m_ltir, fill=as.factor(MadePlayoffs))) 
 # averages for playoffs/not playoffs by season
 ggplot(data=means_data_season) +
   geom_col(aes(x=season, y=m_AvAge, fill=as.factor(MadePlayoffs)), position = position_dodge(1)) +
-  geom_hline(yintercept=c(28.24750,28.94125), color=c("blue","red"), lty = "dashed") +
+  geom_hline(yintercept=c(28.94125,28.24750), color=c("blue","red"), lty = "dashed") +
   labs(title = "Average Team Age, per Season, grouped by Make/Not Make Playoffs", x="Season", y="Average Age (Years)", fill="MadePlayoffs")
 
 ggplot(data=means_data_season) +
