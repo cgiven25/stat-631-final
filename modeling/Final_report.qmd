@@ -5,7 +5,7 @@ date: "May 15 2026"
 format: pdf
 ---
 
-```{r}
+```{r echo=FALSE}
 #the ONLY restrictions are that this should be approximately 5 pages
 #there is no other information about the report
 library(knitr)
@@ -17,12 +17,12 @@ In order to make the NHL season less fun, for this project we tried to predict w
 
 ## Data
 
-The NHL as an organization is not typically interested in sharing the data they acquire about games, so there are few places to get good, publicly available data. The website hockey-reference (h-r) has good season level data, but doesn't have easily scrapeable game by game data. The website capfriendly used to have good and up-to-date cap data, but it was purchased recently by the Washington Capitals, so sportrac was used as a replacement. It is fairly accurate, but it does not have detailed information on player salaries. Ultimately we end up with 44 variables to choose from. We will sort these into categories based on their presumed collinearity. 
+The NHL as an organization is not typically interested in sharing the data they acquire about games, so there are few places to get good, publicly available data. The website hockey-reference (h-r) has good season level data, but doesn't have easily scrapeable game by game data. Sportrac was used as a cap reference. It is fairly accurate, but it does not have detailed information on player salaries. Ultimately we end up with 44 variables to choose from. We will sort these into categories based on their presumed collinearity. 
 
 - **General information:** conference, division, average age (AvAge), games played (GP), season
 - **Games-dependent**: wins (W), losses (OL), points (PTS), points percentage (PTS.), shootout wins (SOW), shootout losses (SOL)
-- **Goals-dependent:** goals for (GF), goals against (GA), h-r rating (SRS), strength of schedule (SOS), goals for per game (GF.G), goals against per game (GA.G), power play goals (PP), power play percentage (PP.), power play goals against (PPA), penalty kill percentage (PK.), shorthanded goals (SH), shorthanded goals against (SHA), shooting percentage (S.), shots on goal (S), shots against (SA), save percentage (SV.), shutouts (SO)
-- **Situation-dependent:** powerplay opportunities (PPO), power play opportunities against (PPOA), penalty minutes per game (PIM.G), opponent penalty minutes per game (oPIM.G)
+- **Goals-dependent:** goals for (GF), goals against (GA), h-r rating (SRS), strength of schedule (SOS), goals for per game (GF.G), goals against per game (GA.G), power play goals (PP)... etc.
+- **Situation-dependent:** powerplay opportunities (PPO), power play opportunities against (PPOA), penalty minutes per game (PIM.G)... etc.
 - **Cap-dependent:** cap space, cap allocation (depends on season)
 - **Money, but *not* cap-dependent:** dollars in long-term injured reserve (litr)
 - **Response:** whether or not a team has made the playoffs, as 0 or 1 (MadePlayoffs)
@@ -32,60 +32,24 @@ When selecting variables to use to predict whether or not a team has made the pl
 For these variables we performed exploratory data analysis to investigate any obvious trends. 
 
 ```{r}
-#| fig-cap: "Average Team Age"
-#| label: fig-avage
-#| out.width: "70%"
+#| fig-cap: "Exploratory Data Analysis"
+#| label: fig-eda
+#| out.width: "100%"
 #| echo: false
 #| message: false
 #| warning: false
 
 
-knitr::include_graphics("avage.png")
+knitr::include_graphics("ggarrange.png")
 ```
 
-In @fig-avage, we see that in the past five years the average age for teams making the playoffs is 28.9 while the average age for missing the playoffs is 28.2. This is a pretty small difference, and the only noticeable trend is that all teams are older on average this playoff year (2025-2026) than the years before. 
+In @fig-eda, we see that in the past five years the average age for teams making the playoffs is 28.9 while the average age for missing the playoffs is 28.2. This is a pretty small difference, and the only noticeable trend is that all teams are older on average this playoff year (2025-2026) than the years before. 
 
-```{r}
-#| fig-cap: "Average Strength of Schedule"
-#| label: fig-avsos
-#| out.width: "70%"
-#| echo: false
-#| message: false
-#| warning: false
+When looking at strength of schedule, SOS, we can see that teams making the playoffs tend to have a negative strength of schedule, -0.02 on average and teams who don't have a positive one, 0.02 on average. This means that teams that do make the playoffs have an "easier" schedule, playing teams that score fewer goals on average compared to playoff teams. This makes sense. SOS is a small number, and we also see that the difference in SOS between playoff and nonplayoff teams has been shrinking in the past five years. 
 
+Cap space is a little weirder to interpret. There are multiple things to note here in. First, cap space is space *left over*, that a team is *not* spending. On average, teams who miss the playoffs have about \$5.25 million in cap space, so their players tend to be less expensive than teams that do make the playoffs. Second, the cap has changed in the past 5 years. The cap was has been increasing over the years, especially in the past two. Ultimately what is important to notice here is that the four-year pattern before the 2025-2026 season of playoff teams having very little if not negative cap space is not the case for our target season. 
 
-knitr::include_graphics("avsos.png")
-```
-
-When looking at strength of schedule, SOS, in @fig-avsos we can see that teams making the playoffs tend to have a negative strength of schedule, -0.02 on average and teams who don't have a positive one, 0.02 on average. This means that teams that do make the playoffs have an "easier" schedule, playing teams that score fewer goals on average compared to playoff teams. This makes sense. SOS is a small number, and we also see that the difference in SOS between playoff and nonplayoff teams has been shrinking in the past five years. 
-
-```{r}
-#| fig-cap: "Average Cap Space"
-#| label: fig-avcapspace
-#| out.width: "70%"
-#| echo: false
-#| message: false
-#| warning: false
-
-
-knitr::include_graphics("avcapspace.png")
-```
-
-Cap space is a little weirder to interpret. There are multiple things to note here in @fig-avcapspace. First, cap space is space *left over*, that a team is *not* spending. On average, teams who miss the playoffs have about \$5.25 million in cap space, so their players tend to be less expensive than teams that do make the playoffs. Second, the cap has changed in the past 5 years. in 2021-2022, the cap was \$81.5m, increasing to \$82.5m then \$83.5 in 2023-2024, as a result of the agreement reached during the shortened pandemic season in 2020-2021. Then, in 2024-2025, the cap increased to \$88m and is now this season \$95.5m. With that big of an increase, it is not shocking that playoff teams have lots of extra cap space since contracts have not yet adjusted to teams having significantly more money to spend. Finally, you will notice sometimes playoff teams have negative cap space. Sometimes that is cheating, sometimes that is a result of sportrac improperly dealing with LTIR, which we'll talk about next. Ultimately what is important to notice here is that the four-year pattern before the 2025-2026 season of playoff teams having very little if not negative cap space is not the case for our target season. 
-
-```{r}
-#| fig-cap: "Average $ in LTIR"
-#| label: fig-avltir
-#| out.width: "70%"
-#| echo: false
-#| message: false
-#| warning: false
-
-
-knitr::include_graphics("avltir.png")
-```
-
-LTIR, which measures how much money teams are spending by placing players in long term injured reserve, which essentially erases that player's salary and gives the team back that money to spend as long as the player is out for 10 games and 24 regular season days. There are lots of complicated rules about this, but the part relevant for us is that it's a sneaky way for teams to have more money to spend, if they can put an important player on LTIR before the playoffs, get an extra guy or two, and take that player off LTIR when the playoffs arise. It's less a proxy for injury and more for general manager strategy. We see in @fig-avltir that playoff teams have more money in LTIR, on average. 
+LTIR, which measures how much money teams are spending by placing players in long term injured reserve, which essentially erases that player's salary and gives the team back that money to spend as long as the player is out for 10 games and 24 regular season days. There are lots of complicated rules about this, but the part relevant for us is that it's a sneaky way for teams to have more money to spend, if they can put an important player on LTIR before the playoffs, get an extra guy or two, and take that player off LTIR when the playoffs arise. It's less a proxy for injury and more for general manager strategy. We see that playoff teams have more money in LTIR, on average. 
 
 ```{r}
 #| fig-cap: "Average Points by Division"
@@ -111,11 +75,17 @@ We wanted more accuracy, so we decided to increase the model complexity. We used
 
 These models did not perform as well as we had hoped. We think this is for two main reasons: first, we're compressing a long and very complicated season into just a few metrics. Second, the difference between making and missing the playoffs can often be a single point, or even a tiebreak. The features that define a playoff team are both hard to diagnose and often overlap with teams that do not make the playoffs.
 
-> I feel like we should be including summary outputs or something but we're already running out of space as it is.
-> ROC curves, maybe? I haven't added them for now cause we'll need to talk about how to cut stuff for space. 
+```{r}
+#| fig-cap: "Model Output, Logistic Regression"
+#| label: fig-log12
+#| out.width: "100%"
+#| echo: false
+#| message: false
+#| warning: false
 
 
->We think two main reasons why these models are struggling are because we're compressing a massive season's worth of data into very few metrics and the difference between make and miss playoffs can often be a single point or even a tiebreak. This "condition" is hard to diagnose, and its criteria in terms of points actually change every year, so it is understandable that predictors that aren't even points (our direct predictor) struggle. 
+knitr::include_graphics("ggarrange.png")
+```
 
 ## Attempt 2: Poisson Regression
 
@@ -123,27 +93,16 @@ To guarantee that we found exactly the correct number of teams for the playoffs,
 
 This model was a substantial improvement: 26/32 of the playoff standings were predicted correctly. 6 teams were mismatched in the Eastern Conference for the '25-'26 season, and all of the teams in the Western Conference were correctly placed.
 
->This was better! We can explain away errors (panthers especially) and point out what our model does well and what it struggles with
-
 ## Attempt 3: Multinomial Logistic Regression with Win Categories
 
 We also looked at a multinomial model. We organized wins into four equal width buckets and tried multinomial logistic regression, using the team's win bucket as a response. It turns out that for the post-COVID seasons, every team in the top bucket made playoffs, and the vast majority of teams in the second highest bucket also made playoffs. If we could predict those two categories reliably, we could predict the playoff teams with decent accuracy. Unfortunately, this did not pan out. This model performed the worst of everything we tried, with only fourteen of thirty-two buckets correctly predicted. Trying to predict playoffs with that sort of performance would have been nearly impossible, so the analysis stopped there. 
 
->This is maybe what we do with new points
-A little counterintuitive, but what if we try to predict points where we weight regular season wins by 3pts OT/SO wins by 2 points (so we go in and change points for all training data) and then attempt 2 style predict and rank?
-mutate(points2 = 3*RW + 2*OTW + 2*SOW + 1*OTL + 1*SOL), should be in full_data_with_overtimes with the reg wins
-Might not work, depends on if we have the time
-
-
 ## Attempt 4: Recalculate Points and Try Method 2 Again
+
 There is substantial debate about how the NHL calculates points, since the current format sometimes results in teams with relatively few regulation wins earning playoff spots due to a high number of overtime games. One commonly proposed alternative points system is the 3-2-1 system: 3 points for a regulation win, 2 points for overtime and shootout wins, and one point for overtime and shootout losses. For this final model, we recalculated points according to a 3-2-1 system and used it as the response in a log-linear model.
 
 The results were identical to our second attempt. The team rankings were exactly the same, so our playoff teams were the same.
 
-> check me on this explanation plz
-
 ## Conclusion/future
 
-Ultimately we find that predicting playoffs is a tough problem to solve and we probably shouldn't drop out of school. Categorical data analysis here may not be the right strategy (in fact, competing models don't use this strategy) since our categories have too many overlapping features. There are also of course lots of team changes happening during the season that are hard to keep track of, like lineups and injuries and things happening on opposing teams, which is very specific data, but even major change checkpoints like coaching changes or results of a trade deadline were not included. With a dynamic sport and a long season, it is not unreasonable to conclude that season-level data based on some sweeping averages is insufficient. In addition, we still have this issue of non-independence that is a problem for the models we're using here. 
-
-> probably something about future models
+Ultimately we find that predicting playoffs is a tough problem to solve and we probably shouldn't drop out of school. Categorical data analysis here may not be the right strategy (in fact, competing models don't use this strategy) since our categories have too many overlapping features. There are also of course lots of team changes happening during the season that are hard to keep track of, like lineups and injuries and things happening on opposing teams, which is very specific data, but even major change checkpoints like coaching changes or results of a trade deadline were not included. With a dynamic sport and a long season, it is not unreasonable to conclude that season-level data based on some sweeping averages is insufficient. In addition, we still have this issue of non-independence that is a problem for the models we're using here. The contemporary solution to this problem is machine learning, usually XGboost or something similar. We are testing the limits of traditional categorical data analysis.
