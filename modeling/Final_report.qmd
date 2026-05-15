@@ -71,31 +71,19 @@ Finally, it is *crucial* that we note our data are *not* independent. If my team
 
 Since our response `MakePlayoffs` is a binary variable, logistic regression is the natural choice of model. Our first model used only two predictors, `AvAge` and `SOS`. Using this model, we correctly predicted 19/32 of the playoff standings. 
 
-We wanted more accuracy, so we decided to increase the model complexity. We used three new predictors in our second model: `division`, `cap_space`, and `ltir`. The results of the second model were a slight improvement: 22/32 correct standings. However, this model only predicted that ten teams would make the playoffs, which alerted us to a risk associated with predicting `MadePlayoffs` directly. We are not guaranteed to fill our playoff spots, or we may predict that too many teams make the playoffs.
+We wanted more accuracy, so we decided to increase the model complexity. We used three new predictors in our second model: `division`, `cap_space`, and `ltir`. The results of the second model were a slight improvement: 22/32 correct standings. However, this model only predicted that ten teams would make the playoffs, which alerted us to a risk associated with predicting `MadePlayoffs` directly. We are not guaranteed to fill our playoff spots, or we may predict that too many teams make the playoffs. Our model output is in @fig-log12.
 
 These models did not perform as well as we had hoped. We think this is for two main reasons: first, we're compressing a long and very complicated season into just a few metrics. Second, the difference between making and missing the playoffs can often be a single point, or even a tiebreak. The features that define a playoff team are both hard to diagnose and often overlap with teams that do not make the playoffs.
 
-```{r}
-#| fig-cap: "Model Output, Logistic Regression"
-#| label: fig-log12
-#| out.width: "100%"
-#| echo: false
-#| message: false
-#| warning: false
-
-
-knitr::include_graphics("ggarrange.png")
-```
-
 ## Attempt 2: Poisson Regression
 
-To guarantee that we found exactly the correct number of teams for the playoffs, we decided to predict points instead. Then, we can rank the teams within division and conference to select playoff teams by the NHL rules. We still used strategies from categorical data analysis, employing a log-linear model to predict points.
+To guarantee that we found exactly the correct number of teams for the playoffs, we decided to predict points instead. Then, we can rank the teams within division and conference to select playoff teams by the NHL rules. We still used strategies from categorical data analysis, employing a log-linear model to predict points. Our model results are in @fig-pois.
 
 This model was a substantial improvement: 26/32 of the playoff standings were predicted correctly. 6 teams were mismatched in the Eastern Conference for the '25-'26 season, and all of the teams in the Western Conference were correctly placed.
 
 ## Attempt 3: Multinomial Logistic Regression with Win Categories
 
-We also looked at a multinomial model. We organized wins into four equal width buckets and tried multinomial logistic regression, using the team's win bucket as a response. It turns out that for the post-COVID seasons, every team in the top bucket made playoffs, and the vast majority of teams in the second highest bucket also made playoffs. If we could predict those two categories reliably, we could predict the playoff teams with decent accuracy. Unfortunately, this did not pan out. This model performed the worst of everything we tried, with only fourteen of thirty-two buckets correctly predicted. Trying to predict playoffs with that sort of performance would have been nearly impossible, so the analysis stopped there. 
+We also looked at a multinomial model. We organized wins into four equal width buckets and tried multinomial logistic regression, using the team's win bucket as a response. It turns out that for the post-COVID seasons, every team in the top bucket made playoffs, and the vast majority of teams in the second highest bucket also made playoffs. If we could predict those two categories reliably, we could predict the playoff teams with decent accuracy. Unfortunately, this did not pan out. This model performed the worst of everything we tried, with only fourteen of thirty-two buckets correctly predicted. Trying to predict playoffs with that sort of performance would have been nearly impossible, so the analysis stopped there. Model output is in @fig-multi.
 
 ## Attempt 4: Recalculate Points and Try Method 2 Again
 
@@ -106,3 +94,38 @@ The results were identical to our second attempt. The team rankings were exactly
 ## Conclusion/future
 
 Ultimately we find that predicting playoffs is a tough problem to solve and we probably shouldn't drop out of school. Categorical data analysis here may not be the right strategy (in fact, competing models don't use this strategy) since our categories have too many overlapping features. There are also of course lots of team changes happening during the season that are hard to keep track of, like lineups and injuries and things happening on opposing teams, which is very specific data, but even major change checkpoints like coaching changes or results of a trade deadline were not included. With a dynamic sport and a long season, it is not unreasonable to conclude that season-level data based on some sweeping averages is insufficient. In addition, we still have this issue of non-independence that is a problem for the models we're using here. The contemporary solution to this problem is machine learning, usually XGboost or something similar. We are testing the limits of traditional categorical data analysis.
+
+```{r}
+#| fig-cap: "Model Output, Logistic Regression"
+#| label: fig-log12
+#| out.width: "70%"
+#| echo: false
+#| message: false
+#| warning: false
+
+
+knitr::include_graphics("log12.png")
+```
+
+```{r}
+#| fig-cap: "Model Output, Poisson Regression"
+#| label: fig-pois
+#| out.width: "70%"
+#| echo: false
+#| message: false
+#| warning: false
+
+
+knitr::include_graphics("loglin1.png")
+```
+```{r}
+#| fig-cap: "Model Output, Multinomial Regression"
+#| label: fig-multi
+#| out.width: "70%"
+#| echo: false
+#| message: false
+#| warning: false
+
+
+knitr::include_graphics("multinom.png")
+```
